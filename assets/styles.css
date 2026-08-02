@@ -16,7 +16,7 @@
     --ink-soft:#5B655F;
     --rule:rgba(20,24,26,.13);
     --rule-strong:rgba(20,24,26,.28);
-    --accent:#1B34D8;
+    --accent:#a900ff;
     --accent-soft:rgba(27,52,216,.09);
     --live:#2F7D5B;
     --build:#B8860B;
@@ -137,7 +137,10 @@ body::before{
     max-width:60ch;
     margin:18px 0 0;
 }
-.lede strong{color:var(--ink);font-weight:600}
+.lede strong{
+    color:var(--ink);
+    font-weight:600
+}
 .mono-label{
     font-family:var(--mono);
     font-size:11px;
@@ -145,6 +148,15 @@ body::before{
     text-transform:uppercase;
     color:var(--ink-soft);
 }
+
+.mono-label-email {
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.14em;
+    /* text-transform:uppercase; */
+    color:var(--ink-soft);
+}
+
 .accent{color:var(--accent)}
 .underline-accent{
     background-image:linear-gradient(var(--accent),var(--accent));
@@ -174,6 +186,10 @@ body::before{
     display:flex;flex-wrap:wrap;gap:10px 30px;
     padding-top:16px;border-top:1px solid var(--rule);
     flex:0 0 auto;
+}
+
+.cover-mark .logo {
+    width: 180px;
 }
 
 /* ---------- COLUMNS / CARDS ---------- */
@@ -227,8 +243,11 @@ body::before{
 }
 .rung .dot{width:8px;height:8px;background:var(--rule-strong);border-radius:50%}
 .rung .rung-name{
-    font-family:var(--mono);font-size:11px;letter-spacing:.13em;
-    text-transform:uppercase;color:var(--ink-soft);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
 }
 .rung .rung-detail{
     display:block;font-family:var(--body);font-size:clamp(12.5px,.9vw,14px);
@@ -238,8 +257,12 @@ body::before{
 .rung.lit .dot{background:var(--accent)}
 .rung.lit .rung-name{color:var(--accent)}
 .ladder-caption{
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
-    text-transform:uppercase;color:var(--ink-soft);margin-top:9px;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:9px;
 }
 
 /* ---------- WORK INDEX ---------- */
@@ -273,8 +296,11 @@ body::before{
     font-size:clamp(30px,3.4vw,52px);line-height:1;letter-spacing:-.03em;
 }
 .metric .cap{
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
-    text-transform:uppercase;color:var(--ink-soft);
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
 }
 
 /* ---------- PHASES ---------- */
