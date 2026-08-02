@@ -4,20 +4,24 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <title>dataDocs — Web &amp; Mobile Product Engineering</title>
-        <meta name="description" content="Pitch deck: web and mobile product engineering studio." />
+        <meta name="description" content="dataDocs — web platforms, mobile applications and the infrastructure underneath them. Lagos, Nigeria." />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
         <!--
             ────────────────────────────────────────────────────────────────
-            EDIT ONE PLACE ONLY: the BRAND object in the <script> at the
-            bottom of this file. Firm name, tagline, contact details and
-            the footer line are injected from there into every slide.
+            EDIT ONE PLACE ONLY: the BRAND object at the top of assets/app.js
+            Firm name, contact details and location are injected from there.
+
+            PROJECT SCREENSHOTS: drop files into assets/images/work/
+            using the exact filenames listed in README.md. Any slot with a
+            missing file falls back to a labelled frame automatically
+            nothing ever renders broken.
             ────────────────────────────────────────────────────────────────
             Keys:  ← →  or  Space   move between slides
-                G                slide overview
-                N                speaker notes
-                F                fullscreen
-                Ctrl/Cmd + P     export to PDF (landscape, backgrounds on)
+                   G                slide overview
+                   N                speaker notes
+                   F                fullscreen
+                   Ctrl/Cmd + P     export to PDF (landscape, backgrounds on)
         -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,13 +38,29 @@
             <!-- 01 COVER -->
             <section class="slide cover is-active" data-title="Cover">
                 <header class="cover-mark">
-                    <img src="/assets/images/web-logo.png" alt="Web Logo" srcset="" class="logo">
+                    <img src="/assets/images/web-logo.png" alt="dataDocs" class="logo">
                 </header>
 
-                <div class="slide-body stagger">
-                    <p class="mono-label" data-brand="location">Lagos &amp; Nigeria</p>
-                    <h1 class="display" style="margin-top:16px">We build the software<br>and we <span class="underline-accent">keep it running</span>.</h1>
-                    <p class="lede">Web platforms, mobile applications and the infrastructure underneath them. Clinical practices, property groups, fintechs and legal teams across Nigeria run on systems we designed, shipped and still maintain.</p>
+                <div class="cover-split">
+                    <div class="slide-body stagger">
+                        <p class="mono-label" data-brand="location">Lagos, Nigeria</p>
+                        <h1 class="display" style="margin-top:16px">We build the software<br>and we <span class="underline-accent">keep it running</span>.</h1>
+                        <p class="lede">Web platforms, mobile applications and the infrastructure underneath them. Clinical practices, property groups, fintechs and legal teams across Nigeria run on systems we designed, shipped and still maintain.</p>
+                    </div>
+
+                    <div class="cover-visual" id="coverVisual" aria-hidden="true">
+                        <figure class="shot browser tilt-a" data-depth="1.4">
+                            <div class="chrome"><i></i><i></i><i></i><em>place.theunforsaken.org</em></div>
+                            <div class="shot-img"><img src="/assets/images/place-theunforsaken.webp" alt=""></div>
+                        </figure>
+                        <figure class="shot browser tilt-b" data-depth="2.6">
+                            <div class="chrome"><i></i><i></i><i></i><em>lex-ai.africa</em></div>
+                            <div class="shot-img"><img src="/assets/images//jacq.webp" alt=""></div>
+                        </figure>
+                        <figure class="shot phone tilt-c" data-depth="4">
+                            <div class="shot-img"><img src="/assets/images//brg.jpg" alt=""></div>
+                        </figure>
+                    </div>
                 </div>
 
                 <footer class="cover-foot">
@@ -116,7 +136,7 @@
                                 <p class="lede">Agencies stop at the interface. Contractors stop at the code. On every project in this deck we are responsible from the button a user taps to the process running on the server at 2am.</p>
                                 <p class="lede" style="margin-top:14px"><strong>This ladder repeats on each case study</strong> highlighted rungs are the layers we personally built and operate.</p>
                             </div>
-                            <div class="ladder stagger" role="list">
+                            <div class="ladder" role="list">
                                 <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Design systems, responsive UI, accessibility, mobile</span></span></div>
                                 <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Business rules, workflows, scheduling, documents, notifications</span></span></div>
                                 <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Authentication, granular permissions, approval gates, audit</span></span></div>
@@ -136,71 +156,100 @@
                 </div>
                 <div class="slide-body">
                     <h2 class="display-sm">Selected work</h2>
-                    <div style="margin-top:clamp(16px,2.6vh,32px)">
-                        <div class="work-row">
-                            <span class="work-name">The Unforsaken</span>
-                            <span class="work-desc">Clinical psychology practice public site, infrastructure, and a multi-therapist scheduling platform</span>
+                    <div class="work-list" id="workList" style="margin-top:clamp(16px,2.6vh,32px)">
+
+                        <a class="work-row" href="https://theunforsaken.org" target="_blank" rel="noopener"
+                           data-shot="/assets/images/work/unforsaken.jpg">
+                            <span class="work-name">The Unforsaken <span class="ext" aria-hidden="true">↗</span></span>
+                            <span class="work-desc">Clinical psychology practice: public website, infrastructure, and a multi-therapist scheduling platform</span>
                             <span class="status is-live">Live</span>
-                        </div>
-                        <div class="work-row">
-                            <span class="work-name">BRG</span>
-                            <span class="work-desc">Property group corporate site and enquiry pipeline</span>
+                        </a>
+
+                        <a class="work-row" href="https://place.theunforsaken.org" target="_blank" rel="noopener"
+                           data-shot="/assets/images/work/unforsaken-place.jpg">
+                            <span class="work-name">The Unforsaken Place <span class="ext" aria-hidden="true">↗</span></span>
+                            <span class="work-desc">Multi-therapist web and mobile application: Therapy session booking, portals, availability</span>
                             <span class="status is-live">Live</span>
-                        </div>
-                        <div class="work-row">
-                            <span class="work-name">Turris Properties</span>
-                            <span class="work-desc">Property group brand site and listings presentation</span>
+                        </a>
+
+                        <a class="work-row" href="https://www.brg.com.ng" target="_blank" rel="noopener"
+                           data-shot="/assets/images/work/brg.jpg">
+                            <span class="work-name">BRG <span class="ext" aria-hidden="true">↗</span></span>
+                            <span class="work-desc">Real estate development group: corporate site and enquiry pipeline</span>
                             <span class="status is-live">Live</span>
-                        </div>
-                        <div class="work-row">
-                            <span class="work-name">The Unit Homes</span>
-                            <span class="work-desc">Property group development marketing and lead capture</span>
+                        </a>
+
+                        <a class="work-row" href="https://www.turrisproperties.com" target="_blank" rel="noopener"
+                           data-shot="/assets/images/work/turris.jpg">
+                            <span class="work-name">Turris Properties <span class="ext" aria-hidden="true">↗</span></span>
+                            <span class="work-desc">Real estate development firm: brand site and listings presentation</span>
                             <span class="status is-live">Live</span>
-                        </div>
-                        <div class="work-row">
-                            <span class="work-name">Lex-AI</span>
-                            <span class="work-desc">Legal AI asset management platform for African legal teams</span>
+                        </a>
+
+                        <a class="work-row" href="https://www.theunithomes.com" target="_blank" rel="noopener"
+                           data-shot="/assets/images/work/unithomes.jpg">
+                            <span class="work-name">The Unit Homes <span class="ext" aria-hidden="true">↗</span></span>
+                            <span class="work-desc">Real estate development firm: development marketing and lead capture</span>
                             <span class="status is-live">Live</span>
-                        </div>
-                        <div class="work-row">
+                        </a>
+
+                        <a class="work-row" href="https://lex-ai.africa" target="_blank" rel="noopener"
+                           data-shot="/assets/images/work/lex-ai.jpg">
+                            <span class="work-name">Lex-AI <span class="ext" aria-hidden="true">↗</span></span>
+                            <span class="work-desc">Digital succession planning: asset register, inheritance instructions, and AI forecasting of what those assets will be worth</span>
+                            <span class="status is-live">Live</span>
+                        </a>
+
+                        <div class="work-row is-static">
                             <span class="work-name">Three current builds</span>
                             <span class="work-desc">Fintech onboarding, advisory platform, bookings &amp; membership under NDA, summarised later in this deck</span>
                             <span class="status is-build">In build</span>
                         </div>
                     </div>
                 </div>
-                <aside class="notes">Don't read the list. Ask which sector is closest to theirs and open that case study the deck jumps with G.</aside>
+                <aside class="notes">Don't read the list. Hover a row to preview it, or ask which sector is closest to theirs and jump to that case study with G. Every live row is clickable if they want to see it now.</aside>
             </section>
 
             <!-- 06 CASE: THE UNFORSAKEN -->
-            <section class="slide" data-title="Case The Unforsaken">
+            <section class="slide" data-title="Case: The Unforsaken">
                 <div class="slide-head">
                     <span class="kicker">Case study <b>/ 05 · Healthcare</b></span>
                     <span class="counter"></span>
                 </div>
                 <div class="slide-body">
-                    <div class="split">
+                    <div class="case-split">
                         <div class="stagger">
-                            <span class="mono-label">theunforsaken.org · place.theunforsaken.org</span>
+                            <span class="mono-label">Clinical psychology practice</span>
                             <h2 class="display-sm" style="margin-top:10px">A clinical practice, running on one platform.</h2>
-                            <p class="lede">A psychology practice needed more than a website: a way for clients to find the right therapist, book a real session against real availability, and for the practice to run the whole operation without a spreadsheet.</p>
-                            <ul class="list" style="margin-top:16px">
-                                <li><b>Three portals, one system.</b> Separate experiences for clients, therapists and administrators, each seeing only what their role permits.</li>
-                                <li><b>Scheduling that respects reality.</b> Live availability, calendar integration, conflict prevention, and graceful behaviour when a calendar is unreachable.</li>
-                                <li><b>Two service tiers</b> served from a single platform, so the practice can reach different client segments without running two businesses.</li>
+                            <p class="lede">More than a website: clients find the right therapist, book a real session against real availability, and the practice runs its whole operation without a spreadsheet.</p>
+                            <ul class="list" style="margin-top:14px">
+                                <li><b>Three portals, one system.</b> Clients, therapists and administrators each see only what their role permits.</li>
+                                <li><b>Scheduling that respects reality.</b> Live availability, calendar integration, conflict prevention, graceful fallback when a calendar is unreachable.</li>
                                 <li><b>Built for sensitive data</b> under Nigeria's NDPA consent, access control and retention designed in, not bolted on.</li>
                             </ul>
+                            <p class="link-row">
+                                <a class="link-out" href="https://theunforsaken.org" target="_blank" rel="noopener">theunforsaken.org <span aria-hidden="true">↗</span></a>
+                                <a class="link-out" href="https://place.theunforsaken.org" target="_blank" rel="noopener">place.theunforsaken.org <span aria-hidden="true">↗</span></a>
+                            </p>
                         </div>
-                        <div>
-                            <div class="ladder">
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Public site, client booking, therapist &amp; admin dashboards</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Session scheduling, availability, notifications, reporting</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Client / therapist / admin separation, protected routes</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Booking model, conflict logic, migrations, test coverage</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Private server, deployment pipeline, SSL, transactional mail</span></span></div>
-                            </div>
-                            <p class="ladder-caption">Full ownership design through production operations</p>
+
+                        <div class="case-visual">
+                            <figure class="shot browser">
+                                <div class="chrome"><i></i><i></i><i></i><em>place.theunforsaken.org</em></div>
+                                <div class="shot-img"><img src="/assets/images/work/unforsaken-place.jpg" alt="The Unforsaken Place therapist booking platform"></div>
+                            </figure>
+                            <figure class="shot phone overlap">
+                                <div class="shot-img"><img src="/assets/images/work/unforsaken-mobile.jpg" alt="The Unforsaken Place on mobile"></div>
+                            </figure>
                         </div>
+                    </div>
+
+                    <div class="ladder ladder-row" role="list">
+                        <div class="rung lit" role="listitem"><span class="rung-name">Interface<span class="rung-detail">Site, booking, therapist &amp; admin dashboards</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Application<span class="rung-detail">Scheduling, availability, notifications</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Access &amp; roles<span class="rung-detail">Client / therapist / admin separation</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Data<span class="rung-detail">Booking model, conflict logic, tests</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Infrastructure<span class="rung-detail">Private server, deploys, SSL, mail</span></span></div>
                     </div>
                 </div>
                 <aside class="notes">Flagship story. If they're in a regulated or professional-services field, spend the most time here.</aside>
@@ -214,61 +263,75 @@
                 </div>
                 <div class="slide-body">
                     <h2 class="display-sm" style="max-width:26ch">Three property groups, three distinct identities.</h2>
-                    <p class="lede">Property is sold on credibility. Each of these brands needed to look like the calibre of asset it sells, load fast on a Nigerian mobile connection, and turn interest into a traceable enquiry.</p>
-                    <div class="cols cols-3 stagger" style="margin-top:clamp(18px,2.8vh,34px)">
-                        <article class="card">
-                            <h3>BRG</h3>
+                    <p class="lede">Property is sold on credibility. Each brand needed to look like the calibre of asset it sells, load fast on a Nigerian mobile connection, and turn interest into a traceable enquiry.</p>
+
+                    <div class="cols cols-3 stagger" style="margin-top:clamp(16px,2.4vh,30px)">
+                        <a class="card card-link" href="https://www.brg.com.ng" target="_blank" rel="noopener">
+                            <figure class="shot browser flat">
+                                <div class="chrome"><i></i><i></i><i></i><em>brg.com.ng</em></div>
+                                <div class="shot-img"><img src="/assets/images/work/brg.jpg" alt="BRG property group website"></div>
+                            </figure>
+                            <h3>BRG <span class="ext" aria-hidden="true">↗</span></h3>
                             <p>Corporate presence for a group portfolio, structured so new developments can be published without a developer.</p>
-                            <span class="mono-label" style="margin-top:auto">brg.com.ng</span>
-                        </article>
-                        <article class="card">
-                            <h3>Turris Properties</h3>
-                            <p>Brand-led site with listings presentation built for scanning on a phone and sharing in a WhatsApp thread.</p>
-                            <span class="mono-label" style="margin-top:auto">turrisproperties.com</span>
-                        </article>
-                        <article class="card">
-                            <h3>The Unit Homes</h3>
+                        </a>
+                        <a class="card card-link" href="https://www.turrisproperties.com" target="_blank" rel="noopener">
+                            <figure class="shot browser flat">
+                                <div class="chrome"><i></i><i></i><i></i><em>turrisproperties.com</em></div>
+                                <div class="shot-img"><img src="/assets/images/work/turris.jpg" alt="Turris Properties website"></div>
+                            </figure>
+                            <h3>Turris Properties <span class="ext" aria-hidden="true">↗</span></h3>
+                            <p>Brand-led site with listings built for scanning on a phone and sharing in a WhatsApp thread.</p>
+                        </a>
+                        <a class="card card-link" href="https://www.theunithomes.com" target="_blank" rel="noopener">
+                            <figure class="shot browser flat">
+                                <div class="chrome"><i></i><i></i><i></i><em>theunithomes.com</em></div>
+                                <div class="shot-img"><img src="/assets/images/work/unithomes.jpg" alt="The Unit Homes website"></div>
+                            </figure>
+                            <h3>The Unit Homes <span class="ext" aria-hidden="true">↗</span></h3>
                             <p>Development marketing with enquiry capture that reaches the sales team in a form they can act on.</p>
-                            <span class="mono-label" style="margin-top:auto">theunithomes.com</span>
-                        </article>
-                    </div>
-                    <div class="cols cols-3" style="margin-top:clamp(18px,2.6vh,30px)">
-                        <div class="metric"><span class="num">3</span><span class="cap">Brand systems designed</span></div>
-                        <div class="metric"><span class="num">100%</span><span class="cap">Mobile-first, search-indexed</span></div>
-                        <div class="metric"><span class="num">1</span><span class="cap">Team maintaining all three</span></div>
+                        </a>
                     </div>
                 </div>
-                <aside class="notes">The proof point here is range: three brands in one sector that don't look like each other.</aside>
+                <aside class="notes">The proof point here is range: three brands in one sector that don't look like each other. All three are clickable if they want to see one live.</aside>
             </section>
 
             <!-- 08 CASE: LEX-AI -->
             <section class="slide" data-title="Case Lex-AI">
                 <div class="slide-head">
-                    <span class="kicker">Case study <b>/ 07 · Legal technology</b></span>
+                    <span class="kicker">Case study <b>/ 07 · Estate planning</b></span>
                     <span class="counter"></span>
                 </div>
                 <div class="slide-body">
-                    <div class="split">
+                    <div class="case-split">
                         <div class="stagger">
-                            <span class="mono-label">lex-ai.africa</span>
-                            <h2 class="display-sm" style="margin-top:10px">AI-assisted asset management for legal teams.</h2>
-                            <p class="lede">Legal work runs on documents, deadlines and precedent. This platform brings AI assistance to legal asset management for African practices where the hard part is not the model, but the structure and permissions around the documents it touches.</p>
-                            <ul class="list" style="margin-top:16px">
-                                <li><b>Document-centred data model</b> built so records stay authoritative as volume grows.</li>
-                                <li><b>AI as a feature, not the product</b> assistance where it saves real hours, with human review kept in the loop.</li>
-                                <li><b>Confidentiality by design</b>, because in legal work an access mistake is a professional liability.</li>
+                            <span class="mono-label">Digital succession planning</span>
+                            <h2 class="display-sm" style="margin-top:10px">A will is a snapshot. Assets keep moving.</h2>
+                            <p class="lede">Lex-AI lets people record everything they own and set instructions for who receives what, and when. Then projects how those assets grow or decline, so the owner and the beneficiaries can both see what's actually coming.</p>
+                            <ul class="list" style="margin-top:14px">
+                                <li><b>Instructions are rules, not a form.</b> "Who gets what, if and when" has to hold conditions, timing and revisions without ever losing the last valid version.</li>
+                                <li><b>Access that changes over time.</b> Beneficiaries see certain assets, at certain moments. Permissions here are the product, not a settings screen.</li>
+                                <li><b>Forecasting on top of the register.</b> Growth and decline projections turn a static list into a living estimate of what a family is inheriting.</li>
+                                <li><b>The most sensitive inventory a person owns.</b> A complete record of someone's assets demands encryption, audit trails and NDPA-grade handling from the schema up.</li>
                             </ul>
+                            <p class="link-row">
+                                <a class="link-out" href="https://lex-ai.africa" target="_blank" rel="noopener">lex-ai.africa <span aria-hidden="true">↗</span></a>
+                            </p>
                         </div>
-                        <div>
-                            <div class="ladder">
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Product UI and marketing surface</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Asset management workflows, AI-assisted actions</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Team permissions and document confidentiality</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Document model, structured metadata</span></span></div>
-                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Deployment and delivery</span></span></div>
-                            </div>
-                            <p class="ladder-caption">Product engineering across the stack</p>
+
+                        <div class="case-visual">
+                            <figure class="shot browser">
+                                <div class="chrome"><i></i><i></i><i></i><em>lex-ai.africa</em></div>
+                                <div class="shot-img"><img src="/assets/images/work/lex-ai.jpg" alt="Lex-AI legal asset management platform"></div>
+                            </figure>
                         </div>
+                    </div>
+
+                    <div class="ladder ladder-row" role="list">
+                        <div class="rung lit" role="listitem"><span class="rung-name">Interface<span class="rung-detail">Asset register, instructions, projections</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Application<span class="rung-detail">Distribution rules, forecasting engine</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Access &amp; roles<span class="rung-detail">Owner / beneficiary, time-gated access</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Data<span class="rung-detail">Asset schema, versioned instructions, audit</span></span></div>
+                        <div class="rung lit" role="listitem"><span class="rung-name">Infrastructure<span class="rung-detail">Deployment and delivery</span></span></div>
                     </div>
                 </div>
                 <aside class="notes">Use this one when the prospect mentions AI. The line that lands: the model is the easy part.</aside>
@@ -282,26 +345,44 @@
                 </div>
                 <div class="slide-body">
                     <h2 class="display-sm" style="max-width:28ch">Three systems in build right now.</h2>
-                    <p class="lede">Client names and links are withheld under signed non-disclosure agreements. <strong>Yours would be too</strong> that discretion is part of the service, and references can be arranged with client permission.</p>
-                    <div class="cols cols-3 stagger" style="margin-top:clamp(18px,2.8vh,34px)">
+                    <p class="lede">Client names, links and screenshots are withheld under signed non-disclosure agreements. <strong>Yours would be too</strong> that discretion is part of the service, and references can be arranged with client permission.</p>
+                    <div class="cols cols-3 stagger" style="margin-top:clamp(16px,2.4vh,30px)">
                         <article class="card">
+                            <div class="redacted" aria-hidden="true">
+                                <span class="redacted-tag">Withheld</span>
+                                <span class="bar w70"></span><span class="bar w45"></span>
+                                <span class="bar w90"></span><span class="bar w60"></span>
+                                <span class="bar w35"></span>
+                            </div>
                             <span class="status is-live">Live · active users</span>
                             <h3>Client onboarding automation</h3>
-                            <p>Internal platform for an asset management firm, automating the onboarding of high-net-worth clients replacing a manual, document-heavy process with a tracked digital workflow.</p>
+                            <p>Internal platform for an asset management firm, automating onboarding of high-net-worth clients replacing a manual, document-heavy process with a tracked digital workflow.</p>
                         </article>
                         <article class="card">
+                            <div class="redacted" aria-hidden="true">
+                                <span class="redacted-tag">Withheld</span>
+                                <span class="bar w55"></span><span class="bar w80"></span>
+                                <span class="bar w40"></span><span class="bar w70"></span>
+                                <span class="bar w50"></span>
+                            </div>
                             <span class="status is-build">In build</span>
                             <h3>Advisory &amp; asset management platform</h3>
                             <p>Web and mobile product for a financial advisory firm: member applications, review and approval workflows, and a compliance-gated publishing system with six distinct staff roles.</p>
                         </article>
                         <article class="card">
+                            <div class="redacted" aria-hidden="true">
+                                <span class="redacted-tag">Withheld</span>
+                                <span class="bar w85"></span><span class="bar w50"></span>
+                                <span class="bar w65"></span><span class="bar w40"></span>
+                                <span class="bar w75"></span>
+                            </div>
                             <span class="status is-build">In build</span>
                             <h3>Bookings &amp; membership platform</h3>
                             <p>Consumer booking, memberships, online payments, digital waiver signing with generated PDFs, and QR entry passes verified at the gate on staff phones.</p>
                         </article>
                     </div>
                 </div>
-                <aside class="notes">Discretion is the sales point here never name these clients unless the NDA explicitly permits it. Ask the client whether they want that same protection; the answer is always yes.</aside>
+                <aside class="notes">Discretion is the sales point here, never name these clients unless the NDA explicitly permits it. Ask whether they'd want the same protection; the answer is always yes.</aside>
             </section>
 
             <!-- 10 HOW WE WORK -->
@@ -385,10 +466,10 @@
                             <p style="margin-top:auto"><span class="mono-label">Typical: 3–6 months</span></p>
                         </article>
                         <article class="card">
-                                <span class="card-num">RETAINER</span>
-                                <h3>Ongoing partner</h3>
-                                <p>A monthly arrangement covering maintenance, monitoring, improvements and priority response. Best once you're live and growing.</p>
-                                <p style="margin-top:auto"><span class="mono-label">Monthly, rolling</span></p>
+                            <span class="card-num">RETAINER</span>
+                            <h3>Ongoing partner</h3>
+                            <p>A monthly arrangement covering maintenance, monitoring, improvements and priority response. Best once you're live and growing.</p>
+                            <p style="margin-top:auto"><span class="mono-label">Monthly, rolling</span></p>
                         </article>
                     </div>
                     <p class="lede" style="margin-top:clamp(16px,2.4vh,28px)">Every engagement begins with a scoping conversation and a written proposal. You'll know the price and the plan before you commit to the build.</p>
@@ -410,7 +491,7 @@
                     <div class="contact-grid">
                         <div class="contact-item">
                             <span class="mono-label">Email</span>
-                            <a href="#" data-brand-link="email">hello@example.com</a>
+                            <a href="#" data-brand-link="email">hello@datadocs.com.ng</a>
                         </div>
                         <div class="contact-item">
                             <span class="mono-label">Phone / WhatsApp</span>
@@ -418,11 +499,11 @@
                         </div>
                         <div class="contact-item">
                             <span class="mono-label">Website</span>
-                            <a href="#" data-brand-link="site">example.com</a>
+                            <a href="#" data-brand-link="site">datadocs.com.ng</a>
                         </div>
                         <div class="contact-item">
                             <span class="mono-label">Based in</span>
-                            <span data-brand="location" style="font-size:clamp(14px,1.05vw,17px)">Lagos &amp; Abuja, Nigeria</span>
+                            <span data-brand="location" style="font-size:clamp(14px,1.05vw,17px)">Lagos, Nigeria</span>
                         </div>
                     </div>
                 </div>
@@ -433,6 +514,8 @@
 
         <div class="hint">← → navigate · G overview · N notes</div>
 
+        <figure class="peek" id="peek" aria-hidden="true"><img src="" alt=""></figure>
+
         <nav class="nav" aria-label="Slide navigation">
             <button type="button" id="btnGrid" title="Overview (G)" aria-label="Slide overview">▦</button>
             <button type="button" id="btnPrev" title="Previous (←)" aria-label="Previous slide">←</button>
@@ -440,7 +523,7 @@
         </nav>
 
         <div class="overview" id="overview" role="dialog" aria-label="Slide overview" aria-modal="true">
-            <span class="mono-label">All slides click to jump · Esc to close</span>
+            <span class="mono-label">All slides · click to jump · Esc to close</span>
             <div class="ov-grid" id="ovGrid"></div>
         </div>
 
