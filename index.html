@@ -1,453 +1,451 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>dataDocs — Web &amp; Mobile Product Engineering</title>
-<meta name="description" content="Pitch deck: web and mobile product engineering studio." />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <title>dataDocs — Web &amp; Mobile Product Engineering</title>
+        <meta name="description" content="Pitch deck: web and mobile product engineering studio." />
 
-<!--
-  ────────────────────────────────────────────────────────────────
-  EDIT ONE PLACE ONLY: the BRAND object in the <script> at the
-  bottom of this file. Firm name, tagline, contact details and
-  the footer line are injected from there into every slide.
-  ────────────────────────────────────────────────────────────────
-  Keys:  ← →  or  Space   move between slides
-         G                slide overview
-         N                speaker notes
-         F                fullscreen
-         Ctrl/Cmd + P     export to PDF (landscape, backgrounds on)
--->
+        <!--
+          ────────────────────────────────────────────────────────────────
+          EDIT ONE PLACE ONLY: the BRAND object in the <script> at the
+          bottom of this file. Firm name, tagline, contact details and
+          the footer line are injected from there into every slide.
+          ────────────────────────────────────────────────────────────────
+          Keys:  ← →  or  Space   move between slides
+                G                slide overview
+                N                speaker notes
+                F                fullscreen
+                Ctrl/Cmd + P     export to PDF (landscape, backgrounds on)
+        -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/styles.css">
+    </head>
+    <body>
 
+    <div class="progress" id="progress"></div>
 
-</head>
-<body>
+        <main class="deck" id="deck">
 
-<div class="progress" id="progress"></div>
+            <!-- 01 COVER -->
+            <section class="slide cover is-active" data-title="Cover">
+                <header class="cover-mark">
+                    <span class="mark-glyph" aria-hidden="true"></span>
+                    <span data-brand="name">dataDocs</span>
+                </header>
 
-<main class="deck" id="deck">
+                <div class="slide-body stagger">
+                    <p class="mono-label" data-brand="location">Lagos &amp; Nigeria</p>
+                    <h1 class="display" style="margin-top:16px">We build the software —<br>and we <span class="underline-accent">keep it running</span>.</h1>
+                    <p class="lede">Web platforms, mobile applications and the infrastructure underneath them. Clinical practices, property groups, fintechs and legal teams across Nigeria run on systems we designed, shipped and still maintain.</p>
+                </div>
 
-  <!-- 01 COVER -->
-  <section class="slide cover is-active" data-title="Cover">
-    <header class="cover-mark">
-      <span class="mark-glyph" aria-hidden="true"></span>
-      <span data-brand="name">Studio</span>
-    </header>
+                <footer class="cover-foot">
+                    <span class="mono-label">Capabilities deck</span>
+                    <span class="mono-label" data-brand="year">2026</span>
+                    <span class="mono-label" data-brand="email">hello@example.com</span>
+                </footer>
+                <aside class="notes">Open by naming the room: you're not pitching a website, you're pitching a system someone has to run on Monday morning. Two sentences, then move.</aside>
+            </section>
 
-    <div class="slide-body stagger">
-      <p class="mono-label" data-brand="location">Lagos &amp; Abuja, Nigeria</p>
-      <h1 class="display" style="margin-top:16px">We build the software —<br>and we <span class="underline-accent">keep it running</span>.</h1>
-      <p class="lede">Web platforms, mobile applications and the infrastructure underneath them. Clinical practices, property groups, fintechs and legal teams across Nigeria run on systems we designed, shipped and still maintain.</p>
-    </div>
+            <!-- 02 THE PROBLEM -->
+            <section class="slide" data-title="Where projects break">
+                    <div class="slide-head">
+                        <span class="kicker">The problem <b>/ 01</b></span>
+                        <span class="counter"></span>
+                    </div>
+                    <div class="slide-body">
+                        <div class="split stagger">
+                            <div>
+                                <h2 class="display-sm">Most projects don't fail at design. They fail three months after launch.</h2>
+                                <p class="lede">The site looks right on the pitch deck. Then the first hundred real users arrive, an admin needs a permission nobody scoped, payments need reconciling, and the person who set up the server has stopped replying.</p>
+                            </div>
+                            <ul class="list">
+                                <li><b>Roles get decided last.</b> Who can approve, publish, refund or see a client record is treated as an afterthought, then retrofitted badly.</li>
+                                <li><b>Nobody owns the server.</b> The build is handed over; the deployment, certificates, mail deliverability and backups are not.</li>
+                                <li><b>Payments stop at "it redirected".</b> Webhooks, failed charges and reconciliation are where the real money problems live.</li>
+                                <li><b>Compliance arrives late.</b> Consent, data retention and NDPA obligations get bolted on after the data is already collected.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">This slide earns the rest of the deck. If the prospect has been burned before, let them tell that story here — then the next slide is the answer.</aside>
+            </section>
 
-    <footer class="cover-foot">
-      <span class="mono-label">Capabilities deck</span>
-      <span class="mono-label" data-brand="year">2026</span>
-      <span class="mono-label" data-brand="email">hello@example.com</span>
-    </footer>
-    <aside class="notes">Open by naming the room: you're not pitching a website, you're pitching a system someone has to run on Monday morning. Two sentences, then move.</aside>
-  </section>
+            <!-- 03 WHAT WE DO -->
+            <section class="slide" data-title="What we build">
+                    <div class="slide-head">
+                        <span class="kicker">Practice <b>/ 02</b></span>
+                        <span class="counter"></span>
+                    </div>
+                <div class="slide-body">
+                    <h2 class="display-sm" style="max-width:22ch">Three things, built to work together.</h2>
+                    <div class="cols cols-3 stagger" style="margin-top:clamp(20px,3vh,40px)">
+                        <article class="card">
+                            <span class="card-num">01</span>
+                            <h3>Web platforms</h3>
+                            <p>Client portals, admin dashboards, booking and scheduling systems, marketing sites. Role-based access, audit trails, email and payment flows built in from the schema up.</p>
+                        </article>
+                        <article class="card">
+                            <span class="card-num">02</span>
+                            <h3>Mobile applications</h3>
+                            <p>Installable, offline-tolerant apps sharing one backend with the web product — so staff on a phone and staff on a desktop see the same truth, at the same time.</p>
+                        </article>
+                        <article class="card">
+                            <span class="card-num">03</span>
+                            <h3>Infrastructure &amp; delivery</h3>
+                            <p>Servers, deployments, domains, SSL, transactional mail and monitoring. We stand it up, document it, and stay on call when it matters.</p>
+                        </article>
+                    </div>
+                </div>
+                <aside class="notes">The point of three: most vendors do one. The handoff between the three is where projects usually leak.</aside>
+            </section>
 
-  <!-- 02 THE PROBLEM -->
-  <section class="slide" data-title="Where projects break">
-    <div class="slide-head">
-      <span class="kicker">The problem <b>/ 01</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <div class="split stagger">
-        <div>
-          <h2 class="display-sm">Most projects don't fail at design. They fail three months after launch.</h2>
-          <p class="lede">The site looks right on the pitch deck. Then the first hundred real users arrive, an admin needs a permission nobody scoped, payments need reconciling, and the person who set up the server has stopped replying.</p>
+            <!-- 04 THE LADDER (signature) -->
+            <section class="slide" data-title="How deep we go">
+                    <div class="slide-head">
+                        <span class="kicker">Depth <b>/ 03</b></span>
+                        <span class="counter"></span>
+                    </div>
+                    <div class="slide-body">
+                        <div class="split">
+                            <div>
+                                <h2 class="display-sm">We own every layer, not just the one you can see.</h2>
+                                <p class="lede">Agencies stop at the interface. Contractors stop at the code. On every project in this deck we are responsible from the button a user taps to the process running on the server at 2am.</p>
+                                <p class="lede" style="margin-top:14px"><strong>This ladder repeats on each case study</strong> — highlighted rungs are the layers we personally built and operate.</p>
+                            </div>
+                            <div class="ladder stagger" role="list">
+                                <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Design systems, responsive UI, accessibility, mobile</span></span></div>
+                                <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Business rules, workflows, scheduling, documents, notifications</span></span></div>
+                                <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Authentication, granular permissions, approval gates, audit</span></span></div>
+                                <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Schema design, migrations, integrity, reporting, retention</span></span></div>
+                                <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Servers, deployment, SSL, mail deliverability, backups, uptime</span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="notes">Signature slide. Say the 2am line out loud — it's the sentence people repeat to their colleagues afterwards.</aside>
+            </section>
+
+            <!-- 05 WORK INDEX -->
+            <section class="slide" data-title="Selected work">
+                <div class="slide-head">
+                    <span class="kicker">Portfolio <b>/ 04</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <h2 class="display-sm">Selected work</h2>
+                    <div style="margin-top:clamp(16px,2.6vh,32px)">
+                        <div class="work-row">
+                            <span class="work-name">The Unforsaken</span>
+                            <span class="work-desc">Clinical psychology practice — public site, infrastructure, and a multi-therapist scheduling platform</span>
+                            <span class="status is-live">Live</span>
+                        </div>
+                        <div class="work-row">
+                            <span class="work-name">BRG</span>
+                            <span class="work-desc">Property group — corporate site and enquiry pipeline</span>
+                            <span class="status is-live">Live</span>
+                        </div>
+                        <div class="work-row">
+                            <span class="work-name">Turris Properties</span>
+                            <span class="work-desc">Property group — brand site and listings presentation</span>
+                            <span class="status is-live">Live</span>
+                        </div>
+                        <div class="work-row">
+                            <span class="work-name">The Unit Homes</span>
+                            <span class="work-desc">Property group — development marketing and lead capture</span>
+                            <span class="status is-live">Live</span>
+                        </div>
+                        <div class="work-row">
+                            <span class="work-name">Lex-AI</span>
+                            <span class="work-desc">Legal AI asset management platform for African legal teams</span>
+                            <span class="status is-live">Live</span>
+                        </div>
+                        <div class="work-row">
+                            <span class="work-name">Three current builds</span>
+                            <span class="work-desc">Fintech onboarding, advisory platform, bookings &amp; membership — under NDA, summarised later in this deck</span>
+                            <span class="status is-build">In build</span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">Don't read the list. Ask which sector is closest to theirs and open that case study — the deck jumps with G.</aside>
+            </section>
+
+            <!-- 06 CASE: THE UNFORSAKEN -->
+            <section class="slide" data-title="Case — The Unforsaken">
+                <div class="slide-head">
+                    <span class="kicker">Case study <b>/ 05 · Healthcare</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <div class="split">
+                        <div class="stagger">
+                            <span class="mono-label">theunforsaken.org · place.theunforsaken.org</span>
+                            <h2 class="display-sm" style="margin-top:10px">A clinical practice, running on one platform.</h2>
+                            <p class="lede">A psychology practice needed more than a website: a way for clients to find the right therapist, book a real session against real availability, and for the practice to run the whole operation without a spreadsheet.</p>
+                            <ul class="list" style="margin-top:16px">
+                                <li><b>Three portals, one system.</b> Separate experiences for clients, therapists and administrators, each seeing only what their role permits.</li>
+                                <li><b>Scheduling that respects reality.</b> Live availability, calendar integration, conflict prevention, and graceful behaviour when a calendar is unreachable.</li>
+                                <li><b>Two service tiers</b> served from a single platform, so the practice can reach different client segments without running two businesses.</li>
+                                <li><b>Built for sensitive data</b> under Nigeria's NDPA — consent, access control and retention designed in, not bolted on.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="ladder">
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Public site, client booking, therapist &amp; admin dashboards</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Session scheduling, availability, notifications, reporting</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Client / therapist / admin separation, protected routes</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Booking model, conflict logic, migrations, test coverage</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Private server, deployment pipeline, SSL, transactional mail</span></span></div>
+                            </div>
+                            <p class="ladder-caption">Full ownership — design through production operations</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">Flagship story. If they're in a regulated or professional-services field, spend the most time here.</aside>
+            </section>
+
+            <!-- 07 CASE: PROPERTY -->
+            <section class="slide" data-title="Case — Property groups">
+                <div class="slide-head">
+                    <span class="kicker">Case study <b>/ 06 · Real estate</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <h2 class="display-sm" style="max-width:26ch">Three property groups, three distinct identities.</h2>
+                    <p class="lede">Property is sold on credibility. Each of these brands needed to look like the calibre of asset it sells, load fast on a Nigerian mobile connection, and turn interest into a traceable enquiry.</p>
+                    <div class="cols cols-3 stagger" style="margin-top:clamp(18px,2.8vh,34px)">
+                        <article class="card">
+                            <h3>BRG</h3>
+                            <p>Corporate presence for a group portfolio, structured so new developments can be published without a developer.</p>
+                            <span class="mono-label" style="margin-top:auto">brg.com.ng</span>
+                        </article>
+                        <article class="card">
+                            <h3>Turris Properties</h3>
+                            <p>Brand-led site with listings presentation built for scanning on a phone and sharing in a WhatsApp thread.</p>
+                            <span class="mono-label" style="margin-top:auto">turrisproperties.com</span>
+                        </article>
+                        <article class="card">
+                            <h3>The Unit Homes</h3>
+                            <p>Development marketing with enquiry capture that reaches the sales team in a form they can act on.</p>
+                            <span class="mono-label" style="margin-top:auto">theunithomes.com</span>
+                        </article>
+                    </div>
+                    <div class="cols cols-3" style="margin-top:clamp(18px,2.6vh,30px)">
+                        <div class="metric"><span class="num">3</span><span class="cap">Brand systems designed</span></div>
+                        <div class="metric"><span class="num">100%</span><span class="cap">Mobile-first, search-indexed</span></div>
+                        <div class="metric"><span class="num">1</span><span class="cap">Team maintaining all three</span></div>
+                    </div>
+                </div>
+                <aside class="notes">The proof point here is range: three brands in one sector that don't look like each other.</aside>
+            </section>
+
+            <!-- 08 CASE: LEX-AI -->
+            <section class="slide" data-title="Case — Lex-AI">
+                <div class="slide-head">
+                    <span class="kicker">Case study <b>/ 07 · Legal technology</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <div class="split">
+                        <div class="stagger">
+                            <span class="mono-label">lex-ai.africa</span>
+                            <h2 class="display-sm" style="margin-top:10px">AI-assisted asset management for legal teams.</h2>
+                            <p class="lede">Legal work runs on documents, deadlines and precedent. This platform brings AI assistance to legal asset management for African practices — where the hard part is not the model, but the structure and permissions around the documents it touches.</p>
+                            <ul class="list" style="margin-top:16px">
+                                <li><b>Document-centred data model</b> built so records stay authoritative as volume grows.</li>
+                                <li><b>AI as a feature, not the product</b> — assistance where it saves real hours, with human review kept in the loop.</li>
+                                <li><b>Confidentiality by design</b>, because in legal work an access mistake is a professional liability.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="ladder">
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Product UI and marketing surface</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Asset management workflows, AI-assisted actions</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Team permissions and document confidentiality</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Document model, structured metadata</span></span></div>
+                                <div class="rung lit"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Deployment and delivery</span></span></div>
+                            </div>
+                            <p class="ladder-caption">Product engineering across the stack</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">Use this one when the prospect mentions AI. The line that lands: the model is the easy part.</aside>
+            </section>
+
+            <!-- 09 IN BUILD (NDA) -->
+            <section class="slide" data-title="Currently in build">
+                <div class="slide-head">
+                    <span class="kicker">Current engagements <b>/ 08 · Under NDA</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <h2 class="display-sm" style="max-width:28ch">Three systems in build right now.</h2>
+                    <p class="lede">Client names and links are withheld under signed non-disclosure agreements. <strong>Yours would be too</strong> — that discretion is part of the service, and references can be arranged with client permission.</p>
+                    <div class="cols cols-3 stagger" style="margin-top:clamp(18px,2.8vh,34px)">
+                        <article class="card">
+                            <span class="status is-live">Live · active users</span>
+                            <h3>Client onboarding automation</h3>
+                            <p>Internal platform for an asset management firm, automating the onboarding of high-net-worth clients — replacing a manual, document-heavy process with a tracked digital workflow.</p>
+                        </article>
+                        <article class="card">
+                            <span class="status is-build">In build</span>
+                            <h3>Advisory &amp; asset management platform</h3>
+                            <p>Web and mobile product for a financial advisory firm: member applications, review and approval workflows, and a compliance-gated publishing system with six distinct staff roles.</p>
+                        </article>
+                        <article class="card">
+                            <span class="status is-build">In build</span>
+                            <h3>Bookings &amp; membership platform</h3>
+                            <p>Consumer booking, memberships, online payments, digital waiver signing with generated PDFs, and QR entry passes verified at the gate on staff phones.</p>
+                        </article>
+                    </div>
+                </div>
+                <aside class="notes">Discretion is the sales point here — never name these clients unless the NDA explicitly permits it. Ask the client whether they want that same protection; the answer is always yes.</aside>
+            </section>
+
+            <!-- 10 HOW WE WORK -->
+            <section class="slide" data-title="How we work">
+                <div class="slide-head">
+                    <span class="kicker">Process <b>/ 09</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <h2 class="display-sm" style="max-width:24ch">Shipped in phases, so you see it working early.</h2>
+                    <div class="cols cols-4 stagger" style="margin-top:clamp(20px,3vh,42px)">
+                        <div class="phase">
+                            <span class="step">STEP 01</span>
+                            <h3>Scope</h3>
+                            <p>We map who uses the system, what each role may do, and what must be true on day one. You get a written scope with fixed deliverables before anyone writes code.</p>
+                        </div>
+                        <div class="phase">
+                            <span class="step">STEP 02</span>
+                            <h3>Build in phases</h3>
+                            <p>Work ships in reviewable phases on a staging link you can open any time. No six-week silences, no big reveal at the end.</p>
+                        </div>
+                        <div class="phase">
+                            <span class="step">STEP 03</span>
+                            <h3>Deploy</h3>
+                            <p>Production server, domain, SSL, mail deliverability and payment integration configured and tested under load before launch day.</p>
+                        </div>
+                        <div class="phase">
+                            <span class="step">STEP 04</span>
+                            <h3>Operate</h3>
+                            <p>Documentation, staff walkthrough, monitoring, and an agreed support arrangement. The system stays maintained, not orphaned.</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">Step 2 is the trust move: a staging link they can open on their own phone whenever they want.</aside>
+            </section>
+
+            <!-- 11 WHAT YOU GET -->
+            <section class="slide" data-title="What you own">
+                <div class="slide-head">
+                    <span class="kicker">Handover <b>/ 10</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <div class="split">
+                        <div>
+                            <h2 class="display-sm">You own it. All of it.</h2>
+                            <p class="lede">No hostage code, no mystery hosting account, no vendor you can't leave. Everything is in your name and documented well enough that another engineer could pick it up tomorrow.</p>
+                        </div>
+                        <ul class="list stagger">
+                            <li><b>Source code and repository</b> transferred to accounts you control.</li>
+                            <li><b>Domains, hosting and mail</b> registered to your organisation, with credentials handed over.</li>
+                            <li><b>Deployment runbook</b> — exactly how to update the system, written for a person, not a machine.</li>
+                            <li><b>Roles and permissions matrix</b> documenting who can do what, and where to change it.</li>
+                            <li><b>Staff walkthrough</b> and a recorded session for whoever joins later.</li>
+                            <li><b>Support arrangement</b> in writing, with defined response times.</li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="notes">This slide closes deals with anyone who has been held hostage by a previous developer. Ask if that's happened to them.</aside>
+            </section>
+
+            <!-- 12 ENGAGEMENT -->
+            <section class="slide" data-title="Working together">
+                <div class="slide-head">
+                    <span class="kicker">Engagement <b>/ 11</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <h2 class="display-sm" style="max-width:24ch">Three ways to work with us.</h2>
+                    <div class="cols cols-3 stagger" style="margin-top:clamp(20px,3vh,40px)">
+                        <article class="card">
+                            <span class="card-num">FIXED SCOPE</span>
+                            <h3>Defined project</h3>
+                            <p>A clear brief with a fixed price and delivery date. Best for marketing sites, brand platforms and well-understood tools.</p>
+                            <p style="margin-top:auto"><span class="mono-label">Typical: 3–8 weeks</span></p>
+                        </article>
+                        <article class="card">
+                            <span class="card-num">PHASED</span>
+                            <h3>Product build</h3>
+                            <p>Priced and delivered phase by phase, so scope can respond to what you learn. Best for platforms with users, roles and payments.</p>
+                            <p style="margin-top:auto"><span class="mono-label">Typical: 3–6 months</span></p>
+                        </article>
+                        <article class="card">
+                                <span class="card-num">RETAINER</span>
+                                <h3>Ongoing partner</h3>
+                                <p>A monthly arrangement covering maintenance, monitoring, improvements and priority response. Best once you're live and growing.</p>
+                                <p style="margin-top:auto"><span class="mono-label">Monthly, rolling</span></p>
+                        </article>
+                    </div>
+                    <p class="lede" style="margin-top:clamp(16px,2.4vh,28px)">Every engagement begins with a paid scoping conversation and a written proposal. You'll know the price and the plan before you commit to the build.</p>
+                </div>
+                <aside class="notes">Adjust the durations to your real numbers, and add price bands if you prefer to anchor early rather than in the proposal.</aside>
+            </section>
+
+            <!-- 13 CONTACT -->
+            <section class="slide" data-title="Let's talk">
+                <div class="slide-head">
+                    <span class="kicker">Next step <b>/ 12</b></span>
+                    <span class="counter"></span>
+                </div>
+                <div class="slide-body">
+                    <div class="stagger">
+                        <h2 class="display" style="max-width:16ch">Tell us what breaks, and we'll tell you what it takes.</h2>
+                        <p class="lede">A 30-minute call is usually enough to know whether this is a fit. Bring the problem, not a specification — the specification is our job.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="mono-label">Email</span>
+                            <a href="#" data-brand-link="email">hello@example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="mono-label">Phone / WhatsApp</span>
+                            <a href="#" data-brand-link="phone">+234 000 000 0000</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="mono-label">Website</span>
+                            <a href="#" data-brand-link="site">example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="mono-label">Based in</span>
+                            <span data-brand="location" style="font-size:clamp(14px,1.05vw,17px)">Lagos &amp; Abuja, Nigeria</span>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">End on the question, not the logo. Ask directly: what's the one thing in your operation that still runs on WhatsApp and a spreadsheet?</aside>
+            </section>
+
+        </main>
+
+        <div class="hint">← → navigate · G overview · N notes</div>
+
+        <nav class="nav" aria-label="Slide navigation">
+            <button type="button" id="btnGrid" title="Overview (G)" aria-label="Slide overview">▦</button>
+            <button type="button" id="btnPrev" title="Previous (←)" aria-label="Previous slide">←</button>
+            <button type="button" id="btnNext" title="Next (→)" aria-label="Next slide">→</button>
+        </nav>
+
+        <div class="overview" id="overview" role="dialog" aria-label="Slide overview" aria-modal="true">
+            <span class="mono-label">All slides — click to jump · Esc to close</span>
+            <div class="ov-grid" id="ovGrid"></div>
         </div>
-        <ul class="list">
-          <li><b>Roles get decided last.</b> Who can approve, publish, refund or see a client record is treated as an afterthought, then retrofitted badly.</li>
-          <li><b>Nobody owns the server.</b> The build is handed over; the deployment, certificates, mail deliverability and backups are not.</li>
-          <li><b>Payments stop at "it redirected".</b> Webhooks, failed charges and reconciliation are where the real money problems live.</li>
-          <li><b>Compliance arrives late.</b> Consent, data retention and NDPA obligations get bolted on after the data is already collected.</li>
-        </ul>
-      </div>
-    </div>
-    <aside class="notes">This slide earns the rest of the deck. If the prospect has been burned before, let them tell that story here — then the next slide is the answer.</aside>
-  </section>
 
-  <!-- 03 WHAT WE DO -->
-  <section class="slide" data-title="What we build">
-    <div class="slide-head">
-      <span class="kicker">Practice <b>/ 02</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <h2 class="display-sm" style="max-width:22ch">Three things, built to work together.</h2>
-      <div class="cols cols-3 stagger" style="margin-top:clamp(20px,3vh,40px)">
-        <article class="card">
-          <span class="card-num">01</span>
-          <h3>Web platforms</h3>
-          <p>Client portals, admin dashboards, booking and scheduling systems, marketing sites. Role-based access, audit trails, email and payment flows built in from the schema up.</p>
-        </article>
-        <article class="card">
-          <span class="card-num">02</span>
-          <h3>Mobile applications</h3>
-          <p>Installable, offline-tolerant apps sharing one backend with the web product — so staff on a phone and staff on a desktop see the same truth, at the same time.</p>
-        </article>
-        <article class="card">
-          <span class="card-num">03</span>
-          <h3>Infrastructure &amp; delivery</h3>
-          <p>Servers, deployments, domains, SSL, transactional mail and monitoring. We stand it up, document it, and stay on call when it matters.</p>
-        </article>
-      </div>
-    </div>
-    <aside class="notes">The point of three: most vendors do one. The handoff between the three is where projects usually leak.</aside>
-  </section>
+        <div class="notes-bar" id="notesBar"><span class="mono-label">Speaker note</span><span id="notesText"></span></div>
 
-  <!-- 04 THE LADDER (signature) -->
-  <section class="slide" data-title="How deep we go">
-    <div class="slide-head">
-      <span class="kicker">Depth <b>/ 03</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <div class="split">
-        <div>
-          <h2 class="display-sm">We own every layer, not just the one you can see.</h2>
-          <p class="lede">Agencies stop at the interface. Contractors stop at the code. On every project in this deck we are responsible from the button a user taps to the process running on the server at 2am.</p>
-          <p class="lede" style="margin-top:14px"><strong>This ladder repeats on each case study</strong> — highlighted rungs are the layers we personally built and operate.</p>
-        </div>
-        <div class="ladder stagger" role="list">
-          <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Design systems, responsive UI, accessibility, mobile</span></span></div>
-          <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Business rules, workflows, scheduling, documents, notifications</span></span></div>
-          <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Authentication, granular permissions, approval gates, audit</span></span></div>
-          <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Schema design, migrations, integrity, reporting, retention</span></span></div>
-          <div class="rung lit" role="listitem"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Servers, deployment, SSL, mail deliverability, backups, uptime</span></span></div>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">Signature slide. Say the 2am line out loud — it's the sentence people repeat to their colleagues afterwards.</aside>
-  </section>
-
-  <!-- 05 WORK INDEX -->
-  <section class="slide" data-title="Selected work">
-    <div class="slide-head">
-      <span class="kicker">Portfolio <b>/ 04</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <h2 class="display-sm">Selected work</h2>
-      <div style="margin-top:clamp(16px,2.6vh,32px)">
-        <div class="work-row">
-          <span class="work-name">The Unforsaken</span>
-          <span class="work-desc">Clinical psychology practice — public site, infrastructure, and a multi-therapist scheduling platform</span>
-          <span class="status is-live">Live</span>
-        </div>
-        <div class="work-row">
-          <span class="work-name">BRG</span>
-          <span class="work-desc">Property group — corporate site and enquiry pipeline</span>
-          <span class="status is-live">Live</span>
-        </div>
-        <div class="work-row">
-          <span class="work-name">Turris Properties</span>
-          <span class="work-desc">Property group — brand site and listings presentation</span>
-          <span class="status is-live">Live</span>
-        </div>
-        <div class="work-row">
-          <span class="work-name">The Unit Homes</span>
-          <span class="work-desc">Property group — development marketing and lead capture</span>
-          <span class="status is-live">Live</span>
-        </div>
-        <div class="work-row">
-          <span class="work-name">Lex-AI</span>
-          <span class="work-desc">Legal AI asset management platform for African legal teams</span>
-          <span class="status is-live">Live</span>
-        </div>
-        <div class="work-row">
-          <span class="work-name">Three current builds</span>
-          <span class="work-desc">Fintech onboarding, advisory platform, bookings &amp; membership — under NDA, summarised later in this deck</span>
-          <span class="status is-build">In build</span>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">Don't read the list. Ask which sector is closest to theirs and open that case study — the deck jumps with G.</aside>
-  </section>
-
-  <!-- 06 CASE: THE UNFORSAKEN -->
-  <section class="slide" data-title="Case — The Unforsaken">
-    <div class="slide-head">
-      <span class="kicker">Case study <b>/ 05 · Healthcare</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <div class="split">
-        <div class="stagger">
-          <span class="mono-label">theunforsaken.org · place.theunforsaken.org</span>
-          <h2 class="display-sm" style="margin-top:10px">A clinical practice, running on one platform.</h2>
-          <p class="lede">A psychology practice needed more than a website: a way for clients to find the right therapist, book a real session against real availability, and for the practice to run the whole operation without a spreadsheet.</p>
-          <ul class="list" style="margin-top:16px">
-            <li><b>Three portals, one system.</b> Separate experiences for clients, therapists and administrators, each seeing only what their role permits.</li>
-            <li><b>Scheduling that respects reality.</b> Live availability, calendar integration, conflict prevention, and graceful behaviour when a calendar is unreachable.</li>
-            <li><b>Two service tiers</b> served from a single platform, so the practice can reach different client segments without running two businesses.</li>
-            <li><b>Built for sensitive data</b> under Nigeria's NDPA — consent, access control and retention designed in, not bolted on.</li>
-          </ul>
-        </div>
-        <div>
-          <div class="ladder">
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Public site, client booking, therapist &amp; admin dashboards</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Session scheduling, availability, notifications, reporting</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Client / therapist / admin separation, protected routes</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Booking model, conflict logic, migrations, test coverage</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Private server, deployment pipeline, SSL, transactional mail</span></span></div>
-          </div>
-          <p class="ladder-caption">Full ownership — design through production operations</p>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">Flagship story. If they're in a regulated or professional-services field, spend the most time here.</aside>
-  </section>
-
-  <!-- 07 CASE: PROPERTY -->
-  <section class="slide" data-title="Case — Property groups">
-    <div class="slide-head">
-      <span class="kicker">Case study <b>/ 06 · Real estate</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <h2 class="display-sm" style="max-width:26ch">Three property groups, three distinct identities.</h2>
-      <p class="lede">Property is sold on credibility. Each of these brands needed to look like the calibre of asset it sells, load fast on a Nigerian mobile connection, and turn interest into a traceable enquiry.</p>
-      <div class="cols cols-3 stagger" style="margin-top:clamp(18px,2.8vh,34px)">
-        <article class="card">
-          <h3>BRG</h3>
-          <p>Corporate presence for a group portfolio, structured so new developments can be published without a developer.</p>
-          <span class="mono-label" style="margin-top:auto">brg.com.ng</span>
-        </article>
-        <article class="card">
-          <h3>Turris Properties</h3>
-          <p>Brand-led site with listings presentation built for scanning on a phone and sharing in a WhatsApp thread.</p>
-          <span class="mono-label" style="margin-top:auto">turrisproperties.com</span>
-        </article>
-        <article class="card">
-          <h3>The Unit Homes</h3>
-          <p>Development marketing with enquiry capture that reaches the sales team in a form they can act on.</p>
-          <span class="mono-label" style="margin-top:auto">theunithomes.com</span>
-        </article>
-      </div>
-      <div class="cols cols-3" style="margin-top:clamp(18px,2.6vh,30px)">
-        <div class="metric"><span class="num">3</span><span class="cap">Brand systems designed</span></div>
-        <div class="metric"><span class="num">100%</span><span class="cap">Mobile-first, search-indexed</span></div>
-        <div class="metric"><span class="num">1</span><span class="cap">Team maintaining all three</span></div>
-      </div>
-    </div>
-    <aside class="notes">The proof point here is range: three brands in one sector that don't look like each other.</aside>
-  </section>
-
-  <!-- 08 CASE: LEX-AI -->
-  <section class="slide" data-title="Case — Lex-AI">
-    <div class="slide-head">
-      <span class="kicker">Case study <b>/ 07 · Legal technology</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <div class="split">
-        <div class="stagger">
-          <span class="mono-label">lex-ai.africa</span>
-          <h2 class="display-sm" style="margin-top:10px">AI-assisted asset management for legal teams.</h2>
-          <p class="lede">Legal work runs on documents, deadlines and precedent. This platform brings AI assistance to legal asset management for African practices — where the hard part is not the model, but the structure and permissions around the documents it touches.</p>
-          <ul class="list" style="margin-top:16px">
-            <li><b>Document-centred data model</b> built so records stay authoritative as volume grows.</li>
-            <li><b>AI as a feature, not the product</b> — assistance where it saves real hours, with human review kept in the loop.</li>
-            <li><b>Confidentiality by design</b>, because in legal work an access mistake is a professional liability.</li>
-          </ul>
-        </div>
-        <div>
-          <div class="ladder">
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Interface<span class="rung-detail">Product UI and marketing surface</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Application<span class="rung-detail">Asset management workflows, AI-assisted actions</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Access &amp; roles<span class="rung-detail">Team permissions and document confidentiality</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Data<span class="rung-detail">Document model, structured metadata</span></span></div>
-            <div class="rung lit"><span class="dot"></span><span class="rung-name">Infrastructure<span class="rung-detail">Deployment and delivery</span></span></div>
-          </div>
-          <p class="ladder-caption">Product engineering across the stack</p>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">Use this one when the prospect mentions AI. The line that lands: the model is the easy part.</aside>
-  </section>
-
-  <!-- 09 IN BUILD (NDA) -->
-  <section class="slide" data-title="Currently in build">
-    <div class="slide-head">
-      <span class="kicker">Current engagements <b>/ 08 · Under NDA</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <h2 class="display-sm" style="max-width:28ch">Three systems in build right now.</h2>
-      <p class="lede">Client names and links are withheld under signed non-disclosure agreements. <strong>Yours would be too</strong> — that discretion is part of the service, and references can be arranged with client permission.</p>
-      <div class="cols cols-3 stagger" style="margin-top:clamp(18px,2.8vh,34px)">
-        <article class="card">
-          <span class="status is-live">Live · active users</span>
-          <h3>Client onboarding automation</h3>
-          <p>Internal platform for an asset management firm, automating the onboarding of high-net-worth clients — replacing a manual, document-heavy process with a tracked digital workflow.</p>
-        </article>
-        <article class="card">
-          <span class="status is-build">In build</span>
-          <h3>Advisory &amp; asset management platform</h3>
-          <p>Web and mobile product for a financial advisory firm: member applications, review and approval workflows, and a compliance-gated publishing system with six distinct staff roles.</p>
-        </article>
-        <article class="card">
-          <span class="status is-build">In build</span>
-          <h3>Bookings &amp; membership platform</h3>
-          <p>Consumer booking, memberships, online payments, digital waiver signing with generated PDFs, and QR entry passes verified at the gate on staff phones.</p>
-        </article>
-      </div>
-    </div>
-    <aside class="notes">Discretion is the sales point here — never name these clients unless the NDA explicitly permits it. Ask the client whether they want that same protection; the answer is always yes.</aside>
-  </section>
-
-  <!-- 10 HOW WE WORK -->
-  <section class="slide" data-title="How we work">
-    <div class="slide-head">
-      <span class="kicker">Process <b>/ 09</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <h2 class="display-sm" style="max-width:24ch">Shipped in phases, so you see it working early.</h2>
-      <div class="cols cols-4 stagger" style="margin-top:clamp(20px,3vh,42px)">
-        <div class="phase">
-          <span class="step">STEP 01</span>
-          <h3>Scope</h3>
-          <p>We map who uses the system, what each role may do, and what must be true on day one. You get a written scope with fixed deliverables before anyone writes code.</p>
-        </div>
-        <div class="phase">
-          <span class="step">STEP 02</span>
-          <h3>Build in phases</h3>
-          <p>Work ships in reviewable phases on a staging link you can open any time. No six-week silences, no big reveal at the end.</p>
-        </div>
-        <div class="phase">
-          <span class="step">STEP 03</span>
-          <h3>Deploy</h3>
-          <p>Production server, domain, SSL, mail deliverability and payment integration configured and tested under load before launch day.</p>
-        </div>
-        <div class="phase">
-          <span class="step">STEP 04</span>
-          <h3>Operate</h3>
-          <p>Documentation, staff walkthrough, monitoring, and an agreed support arrangement. The system stays maintained, not orphaned.</p>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">Step 2 is the trust move: a staging link they can open on their own phone whenever they want.</aside>
-  </section>
-
-  <!-- 11 WHAT YOU GET -->
-  <section class="slide" data-title="What you own">
-    <div class="slide-head">
-      <span class="kicker">Handover <b>/ 10</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <div class="split">
-        <div>
-          <h2 class="display-sm">You own it. All of it.</h2>
-          <p class="lede">No hostage code, no mystery hosting account, no vendor you can't leave. Everything is in your name and documented well enough that another engineer could pick it up tomorrow.</p>
-        </div>
-        <ul class="list stagger">
-          <li><b>Source code and repository</b> transferred to accounts you control.</li>
-          <li><b>Domains, hosting and mail</b> registered to your organisation, with credentials handed over.</li>
-          <li><b>Deployment runbook</b> — exactly how to update the system, written for a person, not a machine.</li>
-          <li><b>Roles and permissions matrix</b> documenting who can do what, and where to change it.</li>
-          <li><b>Staff walkthrough</b> and a recorded session for whoever joins later.</li>
-          <li><b>Support arrangement</b> in writing, with defined response times.</li>
-        </ul>
-      </div>
-    </div>
-    <aside class="notes">This slide closes deals with anyone who has been held hostage by a previous developer. Ask if that's happened to them.</aside>
-  </section>
-
-  <!-- 12 ENGAGEMENT -->
-  <section class="slide" data-title="Working together">
-    <div class="slide-head">
-      <span class="kicker">Engagement <b>/ 11</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <h2 class="display-sm" style="max-width:24ch">Three ways to work with us.</h2>
-      <div class="cols cols-3 stagger" style="margin-top:clamp(20px,3vh,40px)">
-        <article class="card">
-          <span class="card-num">FIXED SCOPE</span>
-          <h3>Defined project</h3>
-          <p>A clear brief with a fixed price and delivery date. Best for marketing sites, brand platforms and well-understood tools.</p>
-          <p style="margin-top:auto"><span class="mono-label">Typical: 3–8 weeks</span></p>
-        </article>
-        <article class="card">
-          <span class="card-num">PHASED</span>
-          <h3>Product build</h3>
-          <p>Priced and delivered phase by phase, so scope can respond to what you learn. Best for platforms with users, roles and payments.</p>
-          <p style="margin-top:auto"><span class="mono-label">Typical: 3–6 months</span></p>
-        </article>
-        <article class="card">
-          <span class="card-num">RETAINER</span>
-          <h3>Ongoing partner</h3>
-          <p>A monthly arrangement covering maintenance, monitoring, improvements and priority response. Best once you're live and growing.</p>
-          <p style="margin-top:auto"><span class="mono-label">Monthly, rolling</span></p>
-        </article>
-      </div>
-      <p class="lede" style="margin-top:clamp(16px,2.4vh,28px)">Every engagement begins with a paid scoping conversation and a written proposal. You'll know the price and the plan before you commit to the build.</p>
-    </div>
-    <aside class="notes">Adjust the durations to your real numbers, and add price bands if you prefer to anchor early rather than in the proposal.</aside>
-  </section>
-
-  <!-- 13 CONTACT -->
-  <section class="slide" data-title="Let's talk">
-    <div class="slide-head">
-      <span class="kicker">Next step <b>/ 12</b></span>
-      <span class="counter"></span>
-    </div>
-    <div class="slide-body">
-      <div class="stagger">
-        <h2 class="display" style="max-width:16ch">Tell us what breaks, and we'll tell you what it takes.</h2>
-        <p class="lede">A 30-minute call is usually enough to know whether this is a fit. Bring the problem, not a specification — the specification is our job.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="mono-label">Email</span>
-          <a href="#" data-brand-link="email">hello@example.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="mono-label">Phone / WhatsApp</span>
-          <a href="#" data-brand-link="phone">+234 000 000 0000</a>
-        </div>
-        <div class="contact-item">
-          <span class="mono-label">Website</span>
-          <a href="#" data-brand-link="site">example.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="mono-label">Based in</span>
-          <span data-brand="location" style="font-size:clamp(14px,1.05vw,17px)">Lagos &amp; Abuja, Nigeria</span>
-        </div>
-      </div>
-    </div>
-    <aside class="notes">End on the question, not the logo. Ask directly: what's the one thing in your operation that still runs on WhatsApp and a spreadsheet?</aside>
-  </section>
-
-</main>
-
-<div class="hint">← → navigate · G overview · N notes</div>
-
-<nav class="nav" aria-label="Slide navigation">
-  <button type="button" id="btnGrid" title="Overview (G)" aria-label="Slide overview">▦</button>
-  <button type="button" id="btnPrev" title="Previous (←)" aria-label="Previous slide">←</button>
-  <button type="button" id="btnNext" title="Next (→)" aria-label="Next slide">→</button>
-</nav>
-
-<div class="overview" id="overview" role="dialog" aria-label="Slide overview" aria-modal="true">
-  <span class="mono-label">All slides — click to jump · Esc to close</span>
-  <div class="ov-grid" id="ovGrid"></div>
-</div>
-
-<div class="notes-bar" id="notesBar"><span class="mono-label">Speaker note</span><span id="notesText"></span></div>
-
-
-</body>
+        <script src="/assets/app.js"></script>
+    </body>
 </html>

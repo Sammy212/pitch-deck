@@ -35,7 +35,7 @@ function applyBrand() {
         if (key === "phone") el.href = "tel:" + BRAND.phone.replace(/[^\d+]/g, "");
         if (key === "site") el.href = BRAND.site.startsWith("http") ? BRAND.site : "https://" + BRAND.site;
     });
-}
+};
 
 function pad(n) { return String(n).padStart(2, "0"); }
 
@@ -50,12 +50,12 @@ function render() {
 
     if (history.replaceState) history.replaceState(null, "", "#" + (current + 1));
     slides[current].scrollTop = 0;
-}
+};
 
 function go(i) {
     current = Math.max(0, Math.min(slides.length - 1, i));
     render();
-}
+};
 
 function buildChrome() {
     slides.forEach((s, i) => {
@@ -73,7 +73,7 @@ function buildChrome() {
         });
         ovGrid.appendChild(card);
     });
-}
+};
 
 document.getElementById("btnNext").addEventListener("click", () => go(current + 1));
 document.getElementById("btnPrev").addEventListener("click", () => go(current - 1));
@@ -91,7 +91,7 @@ document.addEventListener("keydown", (e) => {
     else if (k === "f") {
         if (document.fullscreenElement) document.exitFullscreen();
         else document.documentElement.requestFullscreen();
-    }
+    };
 });
 
 /* swipe on touch devices */
